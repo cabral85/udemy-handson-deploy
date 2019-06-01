@@ -7,6 +7,7 @@ node{
 	stage('Build'){
 	}
 	stage('Move'){
+		sh "rm -f /data/testeweb.war"
 		sh "mv target/testeweb.war /data/testeweb.war"
 	}
 	stage('Deploy'){
