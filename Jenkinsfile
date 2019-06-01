@@ -7,7 +7,6 @@ node{
 		sh "/u01/maven/bin/mvn clean package -DskipTests"
 	}
 	stage('Move'){
-		sh "rm -f /data/testeweb.war"
 		sh "mv target/testeweb.war /data/testeweb.war"
 	}
 	stage('Deploy'){
