@@ -3,8 +3,8 @@ node{
 	stage('Pull'){
 		git url: 'https://github.com/cabral85/udemy-handson-deploy.git'
 	}
-		sh "/u01/maven/bin/mvn clean package -DskipTests"
 	stage('Build'){
+		sh "/u01/maven/bin/mvn clean package -DskipTests"
 	}
 	stage('Move'){
 		sh "rm -f /data/testeweb.war"
